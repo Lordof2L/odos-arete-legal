@@ -73,7 +73,7 @@
 <h3 id="what-we-receive">6. Čo dostávame my</h3>
 <p>Nič z vyššie uvedených údajov. Aplikácia neobsahuje žiadny analytický ani reklamný softvér a nič nám neposiela; pre súčasnú verziu neprevádzkujeme vôbec žiadny server.</p>
 <p>Stiahnutie aplikácie a prípadný nákup spracúva Apple ako samostatný prevádzkovateľ podľa vlastných zásad ochrany súkromia. Ak si na zariadení povolil zdieľanie analytiky s vývojármi aplikácií, Apple nám môže poskytnúť súhrnné štatistiky používania a hlásenia o pádoch; z nich nevieme, kto si.</p>
-<p>Ak nám napíšeš, tvoju správu a e-mailovú adresu použijeme iba na odpoveď, na základe nášho oprávneného záujmu odpovedať (článok 6 ods. 1 písm. f) GDPR), a zmažeme ich, keď na to už nie sú potrebné.</p>
+<p>Ak nám napíšeš, tvoju správu a e-mailovú adresu použijeme iba na odpoveď, na základe nášho oprávneného záujmu odpovedať (článok 6 ods. 1 písm. f) GDPR), a zmažeme ich, keď na to už nie sú potrebné. Výnimkou je žiadosť o zmazanie účtu: tú spolu s našou odpoveďou uchovávame ako záznam o zmazaní (<a href="#commitments">bod 10</a>).</p>
 
 <h3 id="deletion">7. Zálohy a zmazanie</h3>
 <p>Zmazaním aplikácie sa zmažú údaje, ktoré uložila na tvojom zariadení; na Apple Watch zmaž aj aplikáciu pre hodinky. Zálohy tvojho zariadenia (v iCloude alebo v počítači) môžu obsahovať kópiu, kým zálohu nenahradíš alebo nezmažeš; tieto zálohy máš pod kontrolou ty a Apple. Keďže u nás nie sú žiadne tvoje údaje z aplikácie, nemáme čo mazať. Pozri aj <a href="../delete-account/">Zmazať účet</a>.</p>
@@ -99,21 +99,42 @@
 <p>Právny základ: tvoj výslovný súhlas (článok 6 ods. 1 písm. a) a článok 9 ods. 2 písm. a) GDPR, pretože konverzácia sa môže dotknúť tvojho zdravia). Kedykoľvek ho môžeš odvolať v nastaveniach AI v aplikácii; všetko ostatné funguje ďalej. Ak právo tvojej krajiny určuje pre tento súhlas vyšší vek, než máš, AI buddy zostane vypnutý, kým nesúhlasí rodič alebo zákonný zástupca alebo kým tento vek nedosiahneš.</p>
 
 <h3 id="commitments">10. Finančné záväzky</h3>
-<p><strong>Účet.</strong> Na záväzok sa prihlásiš cez Apple (na Androide cez Google). Dostaneme identifikátor používateľa a tvoju e-mailovú adresu (Apple nám môže namiesto nej dať presmerovaciu adresu) a uchovávame token relácie.</p>
-<p><strong>Čo spracúvame:</strong> tvoje denné záznamy (splnené alebo nesplnené, čas, typ a trieda dôkazu, poradové číslo); tvoje časové pásmo; tvoju dohodu (suma, mena, príjemca, krajina fakturácie, verzia podmienok, čas prijatia, IP adresa a prehliadač, tvoje potvrdenie veku); odkaz na kartu od Stripe (identifikátory zákazníka a platobnej metódy, značka karty, posledné štyri číslice a odtlačok karty, nikdy nie celé číslo karty); rezervácie, strhnutia, vrátenia a spory; a e-maily, ktoré ti posielame.</p>
+<p>Voľba poskytovateľa platieb ešte nie je definitívna. Tento bod opisuje súčasný plán so Stripe; ak sa zmení, tento bod aktualizujeme skôr, než sa záväzky spustia.</p>
+<p><strong>Účet.</strong> Na záväzok sa prihlásiš cez Apple (na Androide cez Google). Dostaneme identifikátor používateľa a tvoju e-mailovú adresu (Apple nám môže namiesto nej dať presmerovaciu adresu; od Google ju prevezmeme, iba ak ju Google overil). Na záväzok potrebuješ e-mailovú adresu, lebo na ňu posielame odkaz na nastavenie a každé oznámenie o blokácii alebo strhnutí. Pri prihlásení aplikácia pošle aj tvoju vekovú skupinu (15, 16 až 17 alebo 18 a viac rokov), tvoj režim (a či používaš Easy) a tvoje časové pásmo; podľa nich určujeme, ktoré režimy a záväzky máš k dispozícii, koľko zmeškaných dní môžeš dotiahnuť a kedy sa každý tvoj deň končí. Uchovávame haš tvojho tokenu relácie a, ak sa prihlásiš cez Apple, zašifrovaný token od Apple, s ktorým pri zmazaní účtu ukončíme prihlasovanie cez Apple pre Odos Areté.</p>
+<p><strong>Čo spracúvame:</strong> tvoje denné záznamy (splnené alebo nesplnené, čas, typ a trieda dôkazu, poradové číslo); tvoje časové pásmo a jeho zmeny; čas vytvorenia tvojho účtu, deň, od ktorého počítame tvoje dni, a čas tvojej poslednej zmeny režimu (pre 15-dňový zámok režimu); tvoju dohodu (mena a suma za zmeškaný deň, verzia a jazyk podmienok, vety, ktoré si zaškrtol, vrátane toho, že máš 18 alebo viac rokov, čas potvrdenia a identifikátor stránky Stripe, na ktorej si potom zadal kartu, podľa ktorého tvoje potvrdenie priradíme k tejto karte); tvoju fakturačnú adresu, z ktorej náš server uchováva iba krajinu, ktorá určuje, či sa na tvoju zmluvu vzťahuje naša stránka na odstúpenie (pri adrese v EÚ alebo EHP); odkaz na kartu od Stripe (identifikátory zákazníka a platobnej metódy, posledné štyri číslice, ktoré ti ukazujeme pri tvojom záväzku, a odtlačok karty, podľa ktorého odmietneme nový záväzok s tou istou kartou do 30 dní od odstúpenia; nikdy nie celé číslo karty); blokácie, strhnutia, zamietnutia, vrátenia a každý spor alebo upozornenie na podvod k strhnutiu; vyhlásenie o odstúpení, ak nám ho pošleš cez našu stránku na odstúpenie (meno, e-mailová adresa a číslo zmluvy, ktoré zadáš, čas a výsledok); a e-maily, ktoré ti posielame.</p>
+<p>Tvoju IP adresu náš server používa iba na to, aby obmedzil, koľko prihlásení, žiadostí o zmazanie a vyhlásení o odstúpení môže prísť z toho istého internetového pripojenia za minútu; do našej databázy ju neukladá. Cloudflare môže technické logy nášho servera uchovávať najviac 7 dní. Môžu obsahovať tvoju IP adresu a približnú polohu odvodenú z nej, údaje o tvojom prehliadači alebo aplikácii, webové adresy na našom serveri, ktoré otvoríš ty alebo aplikácia (odkaz na odstúpenie v e-maile, ktorým ti potvrdzujeme záväzok, obsahuje tvoju e-mailovú adresu), a identifikátory tvojho účtu, zmluvy a strhnutí vrátane tých v Stripe.</p>
 <p><strong>Kto ďalší dostáva údaje:</strong></p>
 <ul>
-  <li>Stripe spracúva tvoju kartu a platby. Kartu zadávaš na stránke Stripe a platia aj vlastné zásady ochrany súkromia Stripe.</li>
-  <li>Charita alebo osoba, ktorú si zvolil za príjemcu, dostane sumu cez Stripe. Tvoje meno ani e-mailovú adresu jej nedávame.</li>
-  <li>Google (Gmail) doručuje e-maily, ktoré ti posielame.</li>
+  <li>Stripe spracúva tvoju kartu a platby. Údaje o karte, fakturačnú adresu a e-mailovú adresu zadávaš na stránke Stripe; Stripe ich uchováva v našom účte Stripe a platia aj vlastné zásady ochrany súkromia Stripe. Ak strhnutie napadneš u vydavateľa svojej karty, môžeme mu cez Stripe poskytnúť záznamy k tomuto strhnutiu a k tvojej dohode.</li>
+  <li>Google (Gmail) doručuje e-maily, ktoré ti posielame. Ak sa prihlásiš cez Google, Google potvrdí tvoje prihlásenie.</li>
+  <li>Apple potvrdí tvoje prihlásenie, ak sa prihlásiš cez Apple, a ak používaš presmerovaciu adresu, preposiela ti naše e-maily.</li>
   <li>Cloudflare prevádzkuje náš server a databázu.</li>
 </ul>
-<p><strong>Ako dlho:</strong> záznamy o dohodách, strhnutiach a vráteniach uchovávame 10 rokov od konca účtovného roka, ako to vyžaduje švajčiarske účtovné právo (článok 958f Obligačného zákonníka). Po zmazaní účtu ich uchovávame iba v pseudonymizovanej podobe, bez tvojho identifikátora, e-mailu a IP adresy. Tvoju e-mailovú adresu zmažeme po odoslaní posledného potvrdenia. Všetko ostatné sa zmaže, keď zmažeš účet.</p>
-<p><strong>Právny základ:</strong> zmluva s tebou (článok 6 ods. 1 písm. b) GDPR); naša zákonná povinnosť uchovávať účtovné záznamy (článok 6 ods. 1 písm. c)); a náš oprávnený záujem predchádzať zneužitiu a brániť právne nároky (článok 6 ods. 1 písm. f)).</p>
+<p>Strhnuté sumy dostávame iba my (<a href="#controller">bod 1</a>); žiadna charita ani iná osoba ich nedostane.</p>
+<p>Blokácie a strhnutia vyplývajú automaticky z tvojich denných záznamov podľa pravidiel, ktoré si potvrdil pri nastavení záväzku. Ak s blokáciou alebo strhnutím nesúhlasíš, môžeš to napadnúť tak, že nám napíšeš (<a href="#rights">bod 12</a>), a tvoju námietku posúdi osobne Lukáš Litvák; strhnutie môžeš napadnúť aj u vydavateľa svojej karty.</p>
+<p><strong>Ako dlho:</strong> záznamy o dohodách, strhnutiach a vráteniach uchovávame 10 rokov od konca účtovného roka, ako to vyžaduje švajčiarske účtovné právo (článok 958f Obligačného zákonníka). Tvoj účet a tvoje prihlásenie u nás (vrátane hašov relácií, z ktorých si sa odhlásil), tvoje denné záznamy, históriu tvojho časového pásma a záznamy o odkazoch, ktoré sme ti poslali e-mailom, uchovávame, kým účet nezmažeš, a potom ich zmažeme. Po zmazaní zostávajú:</p>
+<ul>
+  <li>záznamy o tvojich dohodách, strhnutiach a vráteniach pod náhodným identifikátorom účtu, bez tvojho identifikátora od Apple alebo Google a bez tvojej e-mailovej adresy;</li>
+  <li>vyhlásenie o odstúpení, ktoré si poslal, s menom a e-mailovou adresou, ktoré si zadal, ako doklad o tom, čo sme prijali, a to rovnako dlho ako záznamy o jeho dohode; vyhlásenie, ktoré nezodpovedá žiadnej našej zmluve, zmažeme po 30 dňoch, ale kópia e-mailu, ktorým nás naň server upozornil, môže s tými istými údajmi ostať (pozri posledný bod);</li>
+  <li>tvoja e-mailová adresa pri sumách, ktoré sú ešte zablokované alebo ku ktorým sme ti ešte neposlali potvrdenie o strhnutí, kým ti o nich nepošleme posledný e-mail;</li>
+  <li>haš bez soli z tvojej e-mailovej adresy v našom dennom počte e-mailov na jednu adresu, kým náš server v niektorý neskorší deň prvýkrát nepošle niekomu odkaz alebo potvrdenie (oznámenia o blokáciách a strhnutiach ani naše vlastné upozornenia sa nepočítajú);</li>
+  <li>technické logy nášho servera v Cloudflare, najviac 7 dní;</li>
+  <li>upozornenia o blokáciách a strhnutiach, ktoré nám posiela náš server (s identifikátormi tvojho účtu, zmluvy a strhnutí vrátane tých v Stripe, s dátumami a so sumami, ale bez tvojej e-mailovej adresy) a ktoré môžu ostať v našej databáze;</li>
+  <li>údaje o tvojej karte, tvoja fakturačná adresa a e-mailová adresa v Stripe, kým nás nepožiadaš, aby sme ich zmazali; potom ich zmažeme alebo znečitateľníme, nakoľko to Stripe umožňuje, a Stripe si ponechá, čo si podľa zákona ponechať musí (pozri zásady ochrany súkromia Stripe);</li>
+  <li>tvoja žiadosť o zmazanie účtu, ak si ju poslal e-mailom, a naša odpoveď, ktoré uchovávame ako záznam o zmazaní;</li>
+  <li>kópie e-mailov, ktoré náš server poslal tebe a nám a ktoré môžu ostať v našich schránkach Gmail.</li>
+</ul>
+<p><strong>Právny základ:</strong></p>
+<ul>
+  <li>zmluva s tebou (článok 6 ods. 1 písm. b) GDPR): tvoj účet, denné záznamy, dohoda, karta, blokácie, strhnutia, zamietnutia, vrátenia, odstúpenie a e-maily o nich;</li>
+  <li>naša zákonná povinnosť uchovávať účtovné záznamy (článok 6 ods. 1 písm. c)): záznamy uchovávané 10 rokov;</li>
+  <li>náš oprávnený záujem predchádzať zneužitiu a udržať náš server v prevádzke (článok 6 ods. 1 písm. f)): obmedzenie počtu požiadaviek z jedného internetového pripojenia, denný počet e-mailov na jednu adresu, odtlačok karty, technické logy a upozornenia o blokáciách a strhnutiach, ktoré nám posiela náš server;</li>
+  <li>náš oprávnený záujem preukázať, čo sa stalo, a brániť právne nároky (článok 6 ods. 1 písm. f)): spory a upozornenia na podvod k strhnutiam, vyhlásenia o odstúpení, žiadosť o zmazanie účtu poslaná e-mailom a naša odpoveď na ňu, kópie našich e-mailov a tvoje údaje v Stripe po zmazaní účtu.</li>
+</ul>
 <p>Údaje z Času pred obrazovkou a údaje o úniku tvoje zariadenie nikdy neopustia, ani keď máš záväzok.</p>
 
 <h3 id="transfers">11. Prenos do zahraničia</h3>
-<p>Cloudflare, Stripe, OpenRouter, firma prevádzkujúca model a Google môžu údaje spracúvať v Spojených štátoch a v iných krajinách. Ak krajina nemá úroveň ochrany údajov uznanú Švajčiarskom alebo EÚ za primeranú, opierame sa o záruky, ktoré umožňuje zákon, napríklad štandardné zmluvné doložky alebo certifikáciu príjemcu v rámci Data Privacy Framework.</p>
+<p>Cloudflare, Stripe, OpenRouter, firma prevádzkujúca model, Google a Apple môžu údaje spracúvať v Spojených štátoch a v iných krajinách. Stripe medzi nimi uvádza Indiu, Cloudflare môže údaje spracúvať kdekoľvek vo svojej celosvetovej sieti a za používateľov vo Švajčiarsku a v EÚ zodpovedajú Google a Apple prostredníctvom svojich spoločností v Írsku. Krajinu firmy prevádzkujúcej model ti aplikácia ukáže skôr, než dáš súhlas. Ak krajina nemá úroveň ochrany údajov uznanú Švajčiarskom alebo EÚ za primeranú, opierame sa o záruky, ktoré umožňuje zákon, napríklad štandardné zmluvné doložky alebo certifikáciu príjemcu v rámci Data Privacy Framework.</p>
 
 <h2 id="rights">12. Tvoje práva</h2>
 <p>Podľa FADP a GDPR môžeš žiadať prístup k svojim údajom, ich opravu, vymazanie, obmedzenie spracúvania a kópiu v prenosnom formáte, môžeš namietať proti spracúvaniu a kedykoľvek odvolať súhlas. Napíš na <a href="mailto:lukasllitvak@gmail.com">lukasllitvak@gmail.com</a>; odpovieme do 30 dní. Tvoje údaje z aplikácie sú dnes iba na tvojom zariadení, kde si ich môžeš sám pozrieť, zmeniť aj zmazať.</p>
@@ -122,9 +143,9 @@
 <h2 id="changes">13. Zmeny</h2>
 <p>Verzia a dátum týchto zásad sú uvedené na spodku stránky. Pred dôležitou zmenou ti dáme vedieť v aplikácii.</p>
 </main>
-<footer data-version="privacy-1">
+<footer data-version="privacy-2">
   <p>Odos Areté prevádzkuje Lukáš Litvák, fyzická osoba, Manzigenstrasse 1, 6067 Melchtal, Švajčiarsko. Telefón <a href="tel:+41766729590">+41 76 672 95 90</a> · <a href="mailto:lukasllitvak@gmail.com">lukasllitvak@gmail.com</a></p>
-  <p>Verzia privacy-1 · <time datetime="2026-09-24">24. septembra 2026</time></p>
+  <p>Verzia privacy-2 · <time datetime="2026-09-26">26. septembra 2026</time></p>
 </footer>
 </body>
 </html>

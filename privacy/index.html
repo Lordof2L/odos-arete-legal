@@ -73,7 +73,7 @@
 <h3 id="what-we-receive">6. What we receive</h3>
 <p>None of the data above. The app contains no analytics or advertising software and sends nothing to us; for the current version we run no server at all.</p>
 <p>Apple handles the download of the app and any purchase as its own controller under its own privacy policy. If you allowed your device to share analytics with app developers, Apple may give us aggregated usage statistics and crash reports; these do not tell us who you are.</p>
-<p>If you write to us, we use your message and your email address only to answer you, based on our legitimate interest in answering (GDPR Art. 6(1)(f)), and we delete them when they are no longer needed for that.</p>
+<p>If you write to us, we use your message and your email address only to answer you, based on our legitimate interest in answering (GDPR Art. 6(1)(f)), and we delete them when they are no longer needed for that. A request to delete your account is an exception: we keep it, with our reply, as the record of the deletion (<a href="#commitments">section 10</a>).</p>
 
 <h3 id="deletion">7. Backups and deletion</h3>
 <p>Deleting the app deletes the data it stored on your device; on Apple Watch, delete the watch app too. Backups of your device (in iCloud or on a computer) may keep a copy until the backup is replaced or deleted; you and Apple control those backups. Because we hold none of your app data, there is nothing for us to delete. See also <a href="../delete-account/">Delete account</a>.</p>
@@ -99,21 +99,42 @@
 <p>Legal basis: your explicit consent (GDPR Art. 6(1)(a) and Art. 9(2)(a), because a conversation can touch on your health). You can withdraw it at any time in the app’s AI settings; everything else keeps working. Where the law of your country sets a higher age for this consent than your age, the AI buddy stays off until a parent or guardian agrees or you reach that age.</p>
 
 <h3 id="commitments">10. Money commitments</h3>
-<p><strong>Account.</strong> For a commitment you sign in with Apple (or with Google on Android). We receive a user identifier and your email address (Apple may give us a relay address instead) and keep a session token.</p>
-<p><strong>What we process:</strong> your day records (done or not done, time, type and class of proof, a sequence number); your time zone; your agreement (amount, currency, recipient, billing country, version of the terms, time of acceptance, IP address and browser, your age confirmation); a card reference from Stripe (customer and payment-method identifiers, card brand, last four digits and a card fingerprint, never the full card number); holds, charges, refunds and disputes; and the emails we send you.</p>
+<p>The choice of payment provider is not final. This section describes the current plan with Stripe; if that changes, we update this section before commitments start.</p>
+<p><strong>Account.</strong> For a commitment you sign in with Apple (or with Google on Android). We receive a user identifier and your email address (Apple may give us a relay address instead; from Google we take it only if Google has verified it). You need an email address for a commitment, because we send the setup link and every notice about a hold or a charge to it. When you sign in, the app also sends your age group (15, 16 to 17, or 18 and over), your mode (and whether you use Easy) and your time zone; from them we decide which modes and commitments are open to you, how many missed days you can make up and when each of your days ends. We keep a hash of your session token and, if you sign in with Apple, an encrypted Apple token that lets us end Sign in with Apple for Odos Areté when you delete your account.</p>
+<p><strong>What we process:</strong> your day records (done or not done, time, type and class of proof, a sequence number); your time zone and its changes; when your account was created, the day from which we count your days, and when you last changed your mode (for the 15-day mode lock); your agreement (the currency and the amount per missed day, the version and language of the terms, the sentences you ticked, including that you are 18 or older, when you confirmed, and the ID of the Stripe page where you then entered your card, by which we match your confirmation to that card); your billing address, of which our server keeps only the country, which decides whether our withdrawal page applies to your contract (with an address in the EU or EEA); a card reference from Stripe (customer and payment-method identifiers, the last four digits, which we show you with your commitment, and a card fingerprint, with which we refuse a new commitment with the same card within 30 days of a withdrawal; never the full card number); holds, charges, declines, refunds, and any dispute or fraud warning about a charge; a withdrawal statement, if you send one through our withdrawal page (the name, email address and contract ID you enter, the time and the outcome); and the emails we send you.</p>
+<p>Our server uses your IP address only to limit how many sign-ins, deletion requests and withdrawal statements can come from the same internet connection per minute; it does not save it in our database. Cloudflare may keep technical logs of our server for up to 7 days. They can contain your IP address and an approximate location derived from it, details of your browser or app, the web addresses you or the app open on our server (the withdrawal link in our email that confirms your commitment contains your email address) and identifiers of your account, contract and charges, including those at Stripe.</p>
 <p><strong>Who else receives data:</strong></p>
 <ul>
-  <li>Stripe processes your card and the payments. You enter your card on Stripe’s page, and Stripe’s own privacy policy also applies.</li>
-  <li>A charity or person you chose as recipient receives the amount through Stripe. We do not give them your name or email address.</li>
-  <li>Google (Gmail) delivers the emails we send you.</li>
+  <li>Stripe processes your card and the payments. You enter your card details, billing address and email address on Stripe’s page; Stripe keeps them in our Stripe account, and Stripe’s own privacy policy also applies. If you dispute a charge with your card issuer, we may give the issuer, through Stripe, the records of that charge and of your agreement.</li>
+  <li>Google (Gmail) delivers the emails we send you. If you sign in with Google, Google confirms your sign-in.</li>
+  <li>Apple confirms your sign-in if you sign in with Apple, and forwards our emails to you if you use a relay address.</li>
   <li>Cloudflare hosts our server and database.</li>
 </ul>
-<p><strong>How long:</strong> records of agreements, charges and refunds are kept for 10 years from the end of the business year, as Swiss accounting law requires (Art. 958f of the Code of Obligations). After you delete your account they are kept only in pseudonymous form, without your identifier, email or IP address. Your email address is deleted after the last receipt has been sent. Everything else is deleted when you delete your account.</p>
-<p><strong>Legal basis:</strong> the contract with you (GDPR Art. 6(1)(b)); our legal obligation to keep accounting records (Art. 6(1)(c)); and our legitimate interest in preventing abuse and defending legal claims (Art. 6(1)(f)).</p>
+<p>Charged amounts go only to us (<a href="#controller">section 1</a>); no charity or other person receives them.</p>
+<p>Holds and charges follow automatically from your day records, under the rules you confirmed when you set up your commitment. If you disagree with a hold or a charge, you can contest it by writing to us (<a href="#rights">section 12</a>), and Lukáš Litvák reviews your objection himself; you can also dispute a charge with your card issuer.</p>
+<p><strong>How long:</strong> records of agreements, charges and refunds are kept for 10 years from the end of the business year, as Swiss accounting law requires (Art. 958f of the Code of Obligations). Your account and your sign-in with us (including the hashes of sessions you signed out of), your day records, your time-zone history and the records of the links we emailed you are kept until you delete your account, and then deleted. What stays after the deletion:</p>
+<ul>
+  <li>the records of your agreements, charges and refunds, under a random account ID, without your Apple or Google identifier and without your email address;</li>
+  <li>a withdrawal statement you sent, with the name and email address you entered, as evidence of what we received, for as long as we keep the records of its agreement; a statement that matches none of our contracts is deleted after 30 days, but a copy of our alert email about it, with the same details, can remain (see the last point);</li>
+  <li>your email address on amounts that are still held or whose receipt we have not sent yet, until we have sent the last email about them;</li>
+  <li>an unsalted hash of your email address in our daily count of emails per address, until our server, on a later day, first emails anyone a link or a confirmation (notices about holds and charges, and our own alerts, do not count);</li>
+  <li>technical logs of our server at Cloudflare, for up to 7 days;</li>
+  <li>the alerts about holds and charges that our server sends us (with identifiers of your account, contract and charges, including those at Stripe, and with dates and amounts, but without your email address), which can remain in our database;</li>
+  <li>your card details, billing address and email address at Stripe, until you ask us to delete them; we then delete or redact them as far as Stripe allows, and Stripe keeps what the law requires it to keep (see Stripe’s privacy policy);</li>
+  <li>your request by email to delete your account, if you sent one, and our reply, which we keep as the record of the deletion;</li>
+  <li>copies of the emails our server sent to you and to us, which can remain in our Gmail mailboxes.</li>
+</ul>
+<p><strong>Legal basis:</strong></p>
+<ul>
+  <li>the contract with you (GDPR Art. 6(1)(b)): your account, day records, agreement, card, holds, charges, declines, refunds and withdrawal, and the emails about them;</li>
+  <li>our legal obligation to keep accounting records (Art. 6(1)(c)): the records kept for 10 years;</li>
+  <li>our legitimate interest in preventing abuse and keeping our server running (Art. 6(1)(f)): the limit on requests per internet connection, the daily count of emails per address, the card fingerprint, the technical logs and the alerts about holds and charges that our server sends us;</li>
+  <li>our legitimate interest in proving what happened and defending legal claims (Art. 6(1)(f)): disputes and fraud warnings about a charge, withdrawal statements, a request by email to delete your account and our reply, copies of our emails, and your data at Stripe after you delete your account.</li>
+</ul>
 <p>Screen Time data and escape data never leave your device, also when you have a commitment.</p>
 
 <h3 id="transfers">11. Transfers abroad</h3>
-<p>Cloudflare, Stripe, OpenRouter, the company that runs the model and Google may process data in the United States and in other countries. Where a country does not have a level of data protection recognised as adequate by Switzerland or the EU, we rely on the safeguards the law provides, such as standard contractual clauses or the recipient’s certification under the Data Privacy Framework.</p>
+<p>Cloudflare, Stripe, OpenRouter, the company that runs the model, Google and Apple may process data in the United States and in other countries. Stripe names India among them, Cloudflare can process data anywhere in its worldwide network, and Google and Apple are responsible for users in Switzerland and the EU through their companies in Ireland. The app shows you the country of the company that runs the model before you consent. Where a country does not have a level of data protection recognised as adequate by Switzerland or the EU, we rely on the safeguards the law provides, such as standard contractual clauses or the recipient’s certification under the Data Privacy Framework.</p>
 
 <h2 id="rights">12. Your rights</h2>
 <p>Under the FADP and the GDPR you can ask for access to your data, correction, deletion, restriction, a copy in a portable format, and you can object to processing and withdraw consent at any time. Write to <a href="mailto:lukasllitvak@gmail.com">lukasllitvak@gmail.com</a>; we answer within 30 days. Today your app data is only on your device, where you can view, change and delete it yourself.</p>
@@ -122,9 +143,9 @@
 <h2 id="changes">13. Changes</h2>
 <p>The version and date of this policy are shown at the bottom of the page. We tell you in the app before an important change takes effect.</p>
 </main>
-<footer data-version="privacy-1">
+<footer data-version="privacy-2">
   <p>Odos Areté is operated by Lukáš Litvák, an individual, Manzigenstrasse 1, 6067 Melchtal, Switzerland. Phone <a href="tel:+41766729590">+41 76 672 95 90</a> · <a href="mailto:lukasllitvak@gmail.com">lukasllitvak@gmail.com</a></p>
-  <p>Version privacy-1 · <time datetime="2026-09-24">24 September 2026</time></p>
+  <p>Version privacy-2 · <time datetime="2026-09-26">26 September 2026</time></p>
 </footer>
 </body>
 </html>

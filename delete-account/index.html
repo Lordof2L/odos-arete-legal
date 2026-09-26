@@ -54,23 +54,32 @@
 
 <h3 id="deleted">What is deleted</h3>
 <ul>
-  <li>Your account: user identifier, session and, after the last receipt has been sent, your email address.</li>
+  <li>Your account: user identifier, session and, after the last email about your amounts has been sent, your email address.</li>
   <li>Your day records, time zone and all other commitment data, except what is listed below.</li>
   <li>Your commitment ends for all future days.</li>
 </ul>
 
 <h3 id="kept">What is kept, and for how long</h3>
+<p>The choice of payment provider is not final. This list describes the current plan with Stripe (<a href="../privacy/#commitments">Privacy Policy, section 10</a>); if that changes, we update it before commitments start.</p>
 <ul>
-  <li>Records of agreements, charges and refunds are kept for 10 years from the end of the business year, as Swiss accounting law requires, in pseudonymous form: without your identifier, email address or IP address.</li>
+  <li>Records of agreements, charges and refunds are kept for 10 years from the end of the business year, as Swiss accounting law requires, in pseudonymous form: under a random account ID, without your Apple or Google identifier and without your email address.</li>
+  <li>A withdrawal statement you sent is kept with the name and email address you entered, for as long as we keep the records of its agreement; one that matches none of our contracts is deleted after 30 days.</li>
+  <li>Your email address stays on amounts that are still held or whose receipt we have not sent yet, until we have sent the last email about them.</li>
+  <li>An unsalted hash of your email address stays in our daily count of emails per address until our server, on a later day, first emails anyone a link or a confirmation (notices about holds and charges, and our own alerts, do not count).</li>
+  <li>Technical logs of our server at Cloudflare are kept for up to 7 days.</li>
+  <li>The alerts about holds and charges that our server sends us can remain in our database; they contain identifiers of your account, contract and charges, including those at Stripe, and dates and amounts, but not your email address.</li>
+  <li>Your card details, billing address and email address stay at Stripe until you ask us to delete them; we then delete or redact them as far as Stripe allows, and Stripe keeps what the law requires it to keep (see Stripe’s privacy policy).</li>
+  <li>If you asked us by email to delete your account, we keep your request and our reply as the record of the deletion.</li>
+  <li>Copies of the emails our server sent can remain in our Gmail mailboxes.</li>
   <li>On your device, apps blocked after a missed day stay blocked until you record that day as done.</li>
 </ul>
 
 <h3 id="ai-data">AI buddy data</h3>
 <p>AI buddy data on our server is not linked to an account; it is identified only by a salted hash of your subscription. You can delete it in the app’s AI settings or by email to us. Your conversations stored on your device are deleted with the app.</p>
 </main>
-<footer data-version="delete-account-1">
+<footer data-version="delete-account-2">
   <p>Odos Areté is operated by Lukáš Litvák, an individual, Manzigenstrasse 1, 6067 Melchtal, Switzerland. Phone <a href="tel:+41766729590">+41 76 672 95 90</a> · <a href="mailto:lukasllitvak@gmail.com">lukasllitvak@gmail.com</a></p>
-  <p>Version delete-account-1 · <time datetime="2026-09-24">24 September 2026</time></p>
+  <p>Version delete-account-2 · <time datetime="2026-09-26">26 September 2026</time></p>
 </footer>
 </body>
 </html>

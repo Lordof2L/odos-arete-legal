@@ -30,9 +30,9 @@ LANGS = {"en": "", "sk": "sk/", "de": "de/"}
 VERSIONS = {
     "index": ("index-1", "2026-09-24"),
     "terms": ("terms-1-a", "2026-09-24"),
-    "privacy": ("privacy-1", "2026-09-24"),
+    "privacy": ("privacy-2", "2026-09-26"),
     "ai": ("ai-1", "2026-09-24"),
-    "delete-account": ("delete-account-1", "2026-09-24"),
+    "delete-account": ("delete-account-2", "2026-09-26"),
     "support": ("support-1", "2026-09-24"),
 }
 OPERATOR = {"en": "Lukáš Litvák, an individual", "sk": "Lukáš Litvák, fyzická osoba", "de": "Lukáš Litvák, Einzelperson"}
